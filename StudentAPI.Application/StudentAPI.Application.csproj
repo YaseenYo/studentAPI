@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StudentAPI.Infrastructure\StudentAPI.Infrastructure.csproj" />
+    <ProjectReference Include="..\StudentAPI.Domain\StudentAPI.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="MediatR" />
+    <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Command\" />
+    <None Remove="Queries\" />
+    <None Remove="Command\Students\" />
+    <None Remove="Command\Credentials\" />
+    <None Remove="Queries\Credentials\" />
+    <None Remove="Queries\Student\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Command\" />
+    <Folder Include="Queries\" />
+    <Folder Include="Command\Student\" />
+    <Folder Include="Command\Credentials\" />
+    <Folder Include="Queries\Credentials\" />
+    <Folder Include="Queries\Student\" />
+  </ItemGroup>
+</Project>
